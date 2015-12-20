@@ -45,3 +45,96 @@ small {
     color: #000;
     opacity: 0.6;
 }
+
+#login {
+    display: none;
+}
+
+.container {
+    text-align: center;
+}
+
+#select-page {
+    display: none;
+}
+
+select {
+    margin: 20px;
+    font-size: 16px;
+    background: #FFF;
+    border: 1px solid #CCC;
+    box-sizing: border-box;
+}
+
+h2 {
+    color: #999;
+    font: 30px Arial;
+}
+
+button {
+    -webkit-appearance: none;
+    border: 0;
+    font-size: 23px;
+    padding: 9px 31px;
+    color: #FFF;
+    background: #418DC3;
+    border-bottom: 4px solid #2B5E82;
+    cursor: pointer;
+}
+
+button:hover {
+    border-bottom-width: 3px;
+    margin-top: 1px;
+}
+
+button:active {
+    border-bottom-width: 2px;
+    margin-top: 2px;
+}
+
+button:hover,
+button:focus,
+button:visited {
+    outline: none;
+}
+
+.fb-post {
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid #f3f3f3;
+    background: #FFF;
+    min-width: 466px;
+    min-height: 200px;
+    display: inline-block;
+    position: relative;
+}
+
+.fb-post>span {
+    position: relative;
+    z-index: 1;
+}
+
+.fb-post:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    background: #EEE;
+    transform: rotate(45deg) translate(-75%, 0%);
+    animation: loading 1s ease-in-out infinite;
+    z-index: 0;
+}
+
+@keyframes loading {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
