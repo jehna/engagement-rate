@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 ini_set("error_reporting", 1);
 //https://graph.facebook.com/oauth/access_token?grant_type=fb_exchange_token&client_id=816021041756653&client_secret=a0046b7d41f4df08e861e0b3029d6e97&fb_exchange_token=CAALmKrRSue0BAECfhKBtHm2tXf1I5daVVmLDdSgxRoXZB2qsdjRSKUz8BuEGIhzSRxzEB8xfpQCXOtsdi1VYQN9rqYtt5oL4JJjQjKBWltZBnA6ZBZAXvUnLscVi7LFIOZAzcH2WHVb7fF6nX2KQXX70oJ7t8ZAR7FEFyI6lU8ZCZCrnCDaaxPvTp8SgpG5bNkoZD
 $access_token = "CAALmKrRSue0BAJo1C4RpDjbtMw9TUEBOuJGCWeapJvXUWS1ZBEJm10vIJ6g3LAFAoXBpzFWAcxCFpApPvYIx08XFYjN4YsBBAkgQt6smJ7DMjFZAix8Fotq1wjLTrdJyMiimWIwKpWY5z1MFYZB0ZCyaM3rUo676NBnrJ7rEIhWRyvF6xcnO";
@@ -25,11 +25,11 @@ foreach($posts->data as $post) {
 	$post->insigths = json_decode(fbAPI($post->id . "/insights/post_impressions_unique,post_engaged_users"));
 }
 
-?>
+?> -->
 <!DOCTYPE html>
 <html>
 <head>
-<title>CT engagement rate</title>
+<title>Engagement Rate visualizer</title>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 <script type="text/javascript" src="circles.min.js"></script>
 <style>
@@ -95,7 +95,7 @@ The awesome <a href="https://github.com/lugolabs/circles" rel="nofollow">Circles
 Licensed under <a href="LICENSE">MIT license</a>.
 </small>
 <script>
-var $data = <?php echo json_encode($posts); ?>;
+var $data = null; /*<?php echo json_encode($posts); ?>*/
 
 function Lerp(from, to, p) {
 	return from + ((to-from)*p);
